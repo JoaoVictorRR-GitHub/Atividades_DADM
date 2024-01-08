@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 import 'package:atividades_dadm/Estilos_Fontes.dart';
 import 'package:atividades_dadm/Atividade01_Incrementar_Decrementar.dart';
 import 'package:atividades_dadm/Atividade02_Incrementar_com_AppBar.dart';
@@ -6,9 +9,15 @@ import 'package:atividades_dadm/Atividade03_Drawers_e_Tabs.dart';
 import 'package:atividades_dadm/Atividade04_Layout.dart';
 import 'package:atividades_dadm/Atividade05_Login.dart';
 import 'package:atividades_dadm/Atividade06_GridView.dart';
+import 'package:atividades_dadm/Atividade07_Anotacoes.dart';
 
 
-void main() {
+
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -50,6 +59,7 @@ class Atividades extends StatelessWidget {
             Custom_ElevatedButton(linkPagina: Pagina_Layout(),    botaoLegenda: "PÁGINA COM LAYOUT"),
             Custom_ElevatedButton(linkPagina: Pagina_Login(),     botaoLegenda: "PÁGINA DE LOGIN"),
             Custom_ElevatedButton(linkPagina: GridView_Imagens(), botaoLegenda: "GRIDVIEW DE IMAGENS"),
+            Custom_ElevatedButton(linkPagina: Anotacoes(),        botaoLegenda: "ANOTAÇÕES COM FIREBASE"),
           ],
         ),
       ),
