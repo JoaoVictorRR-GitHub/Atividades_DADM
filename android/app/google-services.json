@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "689531434090",
+    "project_id": "notas-ddd35",
+    "storage_bucket": "notas-ddd35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689531434090:android:929234a3878abcc9e18613",
+        "android_client_info": {
+          "package_name": "com.example.atividades"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChGKTViIAvyat_lm-xnE4-riI9I_VPJck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689531434090:android:3b13255b75cdd56fe18613",
+        "android_client_info": {
+          "package_name": "com.example.atividades_dadm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChGKTViIAvyat_lm-xnE4-riI9I_VPJck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
