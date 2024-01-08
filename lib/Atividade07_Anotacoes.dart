@@ -40,14 +40,27 @@ class _AnotacoesState extends State<Anotacoes> {
                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => Detalhes_Anotacao(anotacao: blocosNota)));
                     },
                     child: Dismissible(
+                      background: Container(  // Conteudo que aparece ao deslizar para a direita.
+                        alignment: Alignment.centerLeft,
+                        padding: const EdgeInsets.only(left: 10.0),
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.red),
+                        child: const Icon(Icons.delete_forever_outlined, size: 50),
+                      ),
+                      secondaryBackground: Container( // Conteudo que aparece ao deslizar para a esquerda.
+                        alignment: Alignment.centerRight,
+                        padding: const EdgeInsets.only(right: 10.0),
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.red),
+                        child: const Icon(Icons.delete_forever_outlined, size: 50),
+                      ),
                       key: ValueKey(snap.data!.docs.elementAt(index)),
-                      onDismissed: (direcao) {  // Deleta a anotacao ao deliszar para um dos lados.
+                      onDismissed: (direcao) {  // Deleta a anotacao ao deliszar para uma direcao.
                         anotacoes.doc(blocosNota.id).delete();
                       },
                       child: Card(
+                        color: Colors.lightGreen,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                         child: ListTile(
-                          title: Text(blocosNota['titulo'], style: const TextStyle(fontWeight: FontWeight.bold)),
+                          title: Text(blocosNota['titulo'], style: styleBotao),
                         ),
                       ),
                     ),
@@ -123,20 +136,20 @@ class _Nova_AnotacaoState extends State<Nova_Anotacao> {
         title: const Text('NOVA ANOTAÇÃO', style: styleTitulo),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(25.0),
+        padding: const EdgeInsets.all(30.0),
         children: [
           TextField(
-            controller: titulo,
             maxLength: 20,
-            decoration: const InputDecoration(labelText: 'Titulo'),
+            controller: titulo,
             style: const TextStyle(fontWeight: FontWeight.bold),
+            decoration: const InputDecoration(labelText: 'Título'),
           ),
           Container(
-            margin: const EdgeInsets.only(top: 30.0, bottom: 25.0),
+            margin: const EdgeInsets.only(top: 50.0, bottom: 25.0),
             child: TextField(
-              controller: nota,
-              maxLength: 500,
               maxLines: 10,
+              maxLength: 500,
+              controller: nota,
               decoration: const InputDecoration(
                 labelText: 'Nota',
                 alignLabelWithHint: true,
@@ -173,7 +186,7 @@ class Detalhes_Anotacao extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+          padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: Container(
             height: 250,
             alignment: Alignment.topLeft,
