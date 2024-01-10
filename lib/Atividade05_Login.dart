@@ -16,10 +16,10 @@ class _Pagina_LoginState extends State<Pagina_Login> {
   TextEditingController Nome  = TextEditingController();  // Controle do campo de nome.
   TextEditingController Senha = TextEditingController();  // Controle do campo de senha.
 
-  // Metodo para verificar o login.
-  void VerificarLogin(){
+  // Metodo para verificar o usuario.
+  void VerificarUsuario(){
     setState(() {
-      if((Nome.text == 'admin') && (Senha.text == '1234')){
+      if(Nome.text == 'admin'){
         Navigator.of(context).push(MaterialPageRoute(builder: (context) => Mostrar_Senha(Password: Senha.text)));
       }
       else{ // Mensagem de erro.
@@ -73,7 +73,7 @@ class _Pagina_LoginState extends State<Pagina_Login> {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: (){ VerificarLogin(); }, // Verifica o login.
+                    onPressed: (){ VerificarUsuario(); }, // Verifica o usuario inserido.
                     style: ElevatedButton.styleFrom(backgroundColor: Colors.lightGreen),
                     child: const Text('ENTRAR', style: styleBotao),
                   ),
@@ -88,7 +88,8 @@ class _Pagina_LoginState extends State<Pagina_Login> {
 }
 
 
-/*  Pagina para exibir a senha do login.  */
+/*  Pagina para exibir a senha
+*   inserida pelo usuario no login. */
 class Mostrar_Senha extends StatelessWidget {
   const Mostrar_Senha({super.key, required this.Password});
 
