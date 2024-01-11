@@ -5,11 +5,21 @@
 </p>
 
 
-[//]: # (### | $\textcolor{Yellow}{\text{DETALHES:}}$)
+### | $\textcolor{Yellow}{\text{INSTRUÇÕES:}}$
 
-[//]: # (> * ![RELATÓRIO]&#40;/Relatorio%20Avaliacao%2001.pdf&#41;)
+> * ![ATIVIDADE 01](Atividades/Atividade%2001%20-%20Incrementar%20e%20Decrementar.pdf)
+> * ![ATIVIDADE 02](Atividades/Atividade%2002%20-%20Incrementar%20com%20AppBar.pdf)
+> * ![ATIVIDADE 03](Atividades/Atividade%2003%20-%20Drawer%20e%20TabBar.pdf)
+> * ![ATIVIDADE 04](Atividades/Atividade%2004%20-%20Layout.pdf)
+> * ![ATIVIDADE 05](Atividades/Atividade%2005%20-%20Login.pdf)
+> * ![ATIVIDADE 06](Atividades/Atividade%2006%20-%20GridView%20de%20Imagens.pdf)
+> * ![ATIVIDADE 07](Atividades/Atividade%2007%20-%20Anotacoes%20com%20Firebase.pdf)
+> * Instruções detalhadas sobre cada atividade, com demonstração do resultado esperado.
 
-[//]: # (> * ![INSTRUÇÕES]&#40;/Avaliacao%200%20-%20Flutter.pdf&#41;)
-[//]: # (> * Relatório e instruções acerca do desenvolvimento do projeto da avaliação.)
+
+### | $\textcolor{Yellow}{\text{RELATÓRIO:}}$
+
+> * ![RELATÓRIO](Atividades/Relatorio%20Atividades%20DADM.pdf)
+> * Relatório do projeto compilado com o resultado final de cada atividade.
 
 ---
