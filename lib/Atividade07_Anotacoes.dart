@@ -28,7 +28,7 @@ class _AnotacoesState extends State<Anotacoes> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: StreamBuilder(
-          stream: anotacoes.snapshots(),
+          stream: anotacoes.orderBy('titulo').snapshots(),
           builder: (context, snap){
             if(snap.hasData){
               return ListView.builder(
