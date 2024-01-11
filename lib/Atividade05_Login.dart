@@ -66,7 +66,7 @@ class _Pagina_LoginState extends State<Pagina_Login> {
               child: TextField(
                 controller: Senha,
                 obscureText: true,
-                decoration: const InputDecoration(labelText: 'Inserir Password:', suffixText: '1234'),
+                decoration: const InputDecoration(labelText: 'Inserir Password:'),
               ),
             ),
             Row(
